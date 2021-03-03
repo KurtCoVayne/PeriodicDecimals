@@ -1,5 +1,6 @@
 {
-	"name": "my-app",
+	"name": "periodic-decimals",
+	"author": {"name": "John Alejandro Gonzalez Gonzalez","email": "johnalejandrog.g4@gmail.com","url": "https://johngonzalez.me"},
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
