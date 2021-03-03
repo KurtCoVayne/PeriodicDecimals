@@ -17,6 +17,7 @@ const gcd = (a: number, b: number): number => {
 		a = b;
 		b = temp;
 	}
+	// eslint-disable-next-line no-constant-condition
 	while (true) {
 		if (b === 0) return a;
 		a %= b;
