@@ -1,0 +1,3 @@
+.number-input {
+	@apply py-3 px-4 bg-white rounded-lg placeholder-gray-400 text-gray-900 appearance-none inline-block w-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600;
+}
