@@ -1,10 +1,14 @@
 {
 	"name": "periodic-decimals",
-	"author": {"name": "John Alejandro Gonzalez Gonzalez","email": "johnalejandrog.g4@gmail.com","url": "https://johngonzalez.me"},
+	"author": {
+		"name": "John Alejandro Gonzalez Gonzalez",
+		"email": "johnalejandrog.g4@gmail.com",
+		"url": "https://johngonzalez.me"
+	},
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"@fullhuman/postcss-purgecss": "^4.0.2",
+		"@craco/craco": "^6.1.1",
 		"@testing-library/dom": "^7.29.6",
 		"@testing-library/jest-dom": "^5.11.4",
 		"@testing-library/react": "^11.1.0",
@@ -13,7 +17,6 @@
 		"@types/node": "^12.0.0",
 		"@types/react": "^17.0.0",
 		"@types/react-dom": "^17.0.0",
-		"postcss": "^8.2.6",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"react-scripts": "4.0.3",
@@ -21,13 +24,12 @@
 		"web-vitals": "^1.0.1"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test --onlyChanged",
+		"start": "craco start",
+		"build": "craco build",
+		"test": "craco test --onlyChanged",
 		"eject": "react-scripts eject",
 		"format": "prettier --write src/**/*.ts{,x}",
 		"lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
-		"postbuild": "purgecss --css build/static/css/*.css --content build/index.html build/static/js/*.js --output build/static/css",
 		"postinstall": "is-ci || husky install"
 	},
 	"eslintConfig": {
@@ -49,8 +51,10 @@
 		]
 	},
 	"devDependencies": {
+		"@tailwindcss/postcss7-compat": "^2.0.3",
 		"@typescript-eslint/eslint-plugin": "^4.16.1",
 		"@typescript-eslint/parser": "^4.16.1",
+		"autoprefixer": "^9",
 		"eslint": "^7.21.0",
 		"eslint-config-airbnb": "^18.2.1",
 		"eslint-config-airbnb-typescript": "^12.3.1",
@@ -63,6 +67,8 @@
 		"eslint-plugin-react-hooks": "^4.2.0",
 		"husky": "^5.1.3",
 		"is-ci": "^3.0.0",
-		"prettier": "^2.2.1"
+		"postcss": "^7",
+		"prettier": "^2.2.1",
+		"tailwindcss": "npm:@tailwindcss/postcss7-compat"
 	}
 }
